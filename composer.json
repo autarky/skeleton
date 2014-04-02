@@ -1,0 +1,23 @@
+{
+	"name": "autarky/skeleton",
+	"description": "A skeleton project for Autarky.",
+	"keywords": ["autarky", "project", "skeleton"],
+	"authors": [
+		{
+			"name": "Andreas Lutro",
+			"email": "anlutro@gmail.com"
+		}
+	],
+	"require": {
+		"autarky/framework": "0.1.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Application\\": "src/"
+		}
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "stable"
+}

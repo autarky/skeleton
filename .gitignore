@@ -1,0 +1,7 @@
+# best practice is to not commit the vendor directory. instead, commit the
+# composer.lock file and run `composer install` on the server.
+/vendor
+
+# downloading a local copy of composer.phar on the live server environment is
+# usually a good idea as well
+composer.phar

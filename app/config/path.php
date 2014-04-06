@@ -6,6 +6,22 @@ return [
 	'base' => $base = dirname(dirname(__DIR__)),
 
 	/**
+	 * The path to the autarky app folder, which contains the config directory.
+	 */
+	'app' => $base . '/app',
+
+	/**
+	 * Path to the public directory, which is your web server's documen root.
+	 */
+	'public' => $base . '/public',
+
+	/**
+	 * Path to your composer vendor directory. This path is used to copy files
+	 * from packages into your project (WIP).
+	 */
+	'vendor' => $base . '/vendor',
+
+	/**
 	 * The path where your templates are located.
 	 */
 	'templates' => $base . '/templates',

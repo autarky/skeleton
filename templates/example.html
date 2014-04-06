@@ -6,3 +6,4 @@ alternative if you want.
 <p>{{ message }}</p>
 <p>Visit counter: {{ counter }}</p>
 <p>Visit the other route: <a href="{{ url }}">{{ url }}</a></p>
+<p>Alternately: <a href="{{ url('second.route', ['foo']) }}">click this dynamically generated link</a></p>

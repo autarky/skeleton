@@ -1,7 +1,11 @@
-# best practice is to not commit the vendor directory. instead, commit the
+# Best practice is to not commit the vendor directory. instead, commit the
 # composer.lock file and run `composer install` on the server.
 /vendor
 
-# downloading a local copy of composer.phar on the live server environment is
-# usually a good idea as well
+# Downloading a local copy of composer.phar on the live server environment is
+# usually a good idea as well.
 composer.phar
+
+# Depending on your workflow you may want to add additional paths to gitignore.
+# If you use grunt/gulp or something similar to compile assets, you may want to
+# add directories under public/ here. It's all up to you.

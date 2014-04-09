@@ -19,6 +19,7 @@ return [
 		'Autarky\Session\SessionServiceProvider',
 		'Autarky\Routing\RoutingServiceProvider',
 		'Autarky\Templating\TwigServiceProvider',
+		'Autarky\Logging\LogServiceProvider',
 
 		// This provider binds a PDO instance to your container.
 		// 'Autarky\Database\DatabaseServiceProvider',

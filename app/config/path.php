@@ -24,16 +24,22 @@ return [
 	/**
 	 * The path where your templates are located.
 	 */
-	'templates' => $base . '/templates',
+	'templates' => $base . '/app/templates',
 
 	/**
 	 * The path where cached template files should be stored.
 	 */
-	'templates-cache' => $base . '/tmp/templates',
+	'templates-cache' => $base . '/app/storage/templates',
 
 	/**
 	 * If the 'file' session handler is used, this is the path to the directory
 	 * where session files will be stored.
 	 */
-	'session' => $base . '/tmp/session',
+	'session' => $base . '/app/storage/session',
+
+	/**
+	 * The directory where log files are stored. Change to null to disable
+	 * logging altogether, or if you want to configure logging manually.
+	 */
+	'logs' => $base . '/app/storage/logs',
 ];

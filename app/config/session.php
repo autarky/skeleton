@@ -21,4 +21,16 @@ return [
 	 * but could also be used to enforce a stateless API.
 	 */
 	'mock' => false,
+
+	/**
+	 * Session cookie parameters.
+	 * @link http://www.php.net/manual/en/function.session-set-cookie-params.php
+	 */
+	'cookie' => [
+		'lifetime' => 0,
+		'domain' => null,
+		'path' => '/',
+		'secure' => false,
+		'httponly' => false,
+	],
 ];

@@ -2,8 +2,6 @@
 // Use Composer's autoloader.
 require_once dirname(__DIR__).'/vendor/autoload.php';
 
-use Autarky\Kernel\Application;
-
 /**
  * bootstrap() is a shortcut to set up the default configuration. the second
  * argument defines how the environment is determined. can be a plain string or

@@ -20,7 +20,9 @@ class ExampleController extends Controller
 	}
 
 	/**
-	 * All controller actions are given the request as the first parameter.
+	 * If you type-hint the first parameter as the request class, you will get
+	 * the request instance. Parameter #2 and on will be route parameters as
+	 * usual.
 	 */
 	public function exampleAction(Request $request)
 	{
@@ -44,11 +46,9 @@ class ExampleController extends Controller
 	}
 
 	/**
-	 * As you can see, the Request type-hinting is optional.
-	 * 
-	 * Argument #2 and on are route parameters.
+	 * A route that doesn't take the request object.
 	 */
-	public function otherAction($request, $foo)
+	public function otherAction($foo)
 	{
 		return 'Parameter: '.$foo;
 	}

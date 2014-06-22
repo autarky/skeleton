@@ -10,6 +10,13 @@ return [
 	'handler' => 'file',
 
 	/**
+	 * If the "pdo" handler is used, you may choose which connection for the
+	 * session handler to use. Ideally this should be a connection used only for
+	 * sessions. Leave as null to use the default connection.
+	 */
+	'db-connection' => null,
+
+	/**
 	 * The $options argument given to the session handler's constructor.
 	 * Usually you can leave this alone, but look up the documentation for your
 	 * session handler to check if there are any required options.

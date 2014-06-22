@@ -16,4 +16,6 @@ $app = require __DIR__ .'/start.php';
  */
 $console = $app->bootConsole();
 
+$console->add(new \Autarky\Console\BorisCommand);
+
 $console->run();

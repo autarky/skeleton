@@ -38,14 +38,15 @@ return [
 	'session' => $base . '/app/storage/session',
 
 	/**
-	 * Regex parsing of routes is expensive. It is possible to save the parsed
-	 * route data to a file to improve performance. Set to null to disable.
-	 */
-	'route-cache' => $base . '/app/storage/routes.cache',
-
-	/**
 	 * The directory where log files are stored. Change to null to disable
 	 * logging altogether, or if you want to configure logging manually.
 	 */
 	'logs' => $base . '/app/storage/logs',
+
+	/**
+	 * Regex parsing of routes is expensive. It is possible to save the parsed
+	 * route data to a file to improve performance. Note that closure routes
+	 * will cause caching to break. Set to null to disable.
+	 */
+	'route-cache' => null,
 ];

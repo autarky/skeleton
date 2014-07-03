@@ -1,9 +1,50 @@
-<!--
-Out of the box, Twig templating is used, but you can replace it with your own
-alternative if you want.
--->
-<h1>Autarky</h1>
-<p>{{ message }}</p>
-<p>Visit counter: {{ counter }}</p>
-<p>Visit the other route: <a href="{{ url }}">{{ url }}</a></p>
-<p>Alternately: <a href="{{ url('second.route', ['foo']) }}">click this dynamically generated link</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Autarky</title>
+	<style>
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+body {
+	font-family: 'Open Sans', 'Helvetica', sans-serif;
+	line-height: 1.8;
+}
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+h1 {
+	text-align: center;
+	font-size: 50px;
+	font-weight: 300;
+}
+h2 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 300;
+}
+hr {
+	max-width: 50%;
+	margin: 30px auto;
+	border: none;
+	height: 1px;
+	background: rgba(0,0,0,0.2);
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Autarky</h1>
+		<p>If you can see this page, it means your PHP and webserver are set up correctly.</p>
+		<p>From here, you are encouraged to look at the files included in the skeleton project, read the comments and understand what each part does. You can also browse the <a href="https://github.com/autarky/framework/wiki">framework wiki on GitHub</a> for more information.</p>
+		<hr>
+		<h2>Twig in action</h2>
+		<p>Visit counter: {{ counter }}</p>
+		<p>Message: {{ message ?: 'No message!' }}</p>
+		<p>URL to another route: <a href="{{ url('second.route', ['example-parameter']) }}">Click here!</a></p>
+	</div>
+</body>
+</html>

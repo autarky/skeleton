@@ -45,6 +45,14 @@ hr {
 		<p>Visit counter: {{ counter }}</p>
 		<p>Message: {{ message ?: 'No message!' }}</p>
 		<p>URL to another route: <a href="{{ url('second.route', ['example-parameter']) }}">Click here!</a></p>
+
+		{% if flash %}
+		<hr>
+		<h2>Session flash messages</h2>
+		{% for message in flash %}
+			<p class="message">{{ message }}</p>
+		{% endfor %}
+		{% endif %}
 	</div>
 </body>
 </html>

@@ -34,10 +34,7 @@ class ExampleController extends Controller
 		$counter = $session->get('counter', 0);
 		$session->set('counter', ++$counter);
 
-		/**
-		 * Templating is done via Twig (but can be swapped out with anything you
-		 * want, just write a driver for it)
-		 */
+		// return a rendered template using the view() method.
 		return $this->view('example.html', [
 			'message' => $this->class->sayHello(),
 			'counter' => $counter,
@@ -50,6 +47,11 @@ class ExampleController extends Controller
 	 */
 	public function otherAction($foo)
 	{
-		return 'Parameter: '.$foo;
+		// session flash messages are available on the next request.
+		$this->flashMessages("You were visiting: second.route [$foo]");
+		$this->flashMessages('Refresh the page and these messages will disappear!');
+
+		// redirect to a named route using the redirect() method.
+		return $this->redirect('first.route');
 	}
 }

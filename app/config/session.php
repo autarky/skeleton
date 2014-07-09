@@ -34,7 +34,7 @@ return [
 	 * @link http://www.php.net/manual/en/function.session-set-cookie-params.php
 	 */
 	'cookie' => [
-		'lifetime' => 0,
+		'lifetime' => 3600,
 		'domain' => null,
 		'path' => '/',
 		'secure' => false,

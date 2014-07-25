@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ExampleController extends Controller
 {
-	protected $class;
+	protected $dependency;
 
 	/**
 	 * Auto-dependency injection with no configuration! Unless configured,
@@ -14,9 +14,9 @@ class ExampleController extends Controller
 	 * own classes or classes used internally by the framework, like the session
 	 * or the router or the IoC container.
 	 */
-	public function __construct(SomeClass $class)
+	public function __construct(SomeClass $dependency)
 	{
-		$this->class = $class;
+		$this->dependency = $dependency;
 	}
 
 	/**
@@ -35,8 +35,8 @@ class ExampleController extends Controller
 		$session->set('counter', ++$counter);
 
 		// return a rendered template using the view() method.
-		return $this->view('example.html', [
-			'message' => $this->class->sayHello(),
+		return $this->view('example.html.twig', [
+			'message' => $this->dependency->sayHello(),
 			'counter' => $counter,
 			'url' => $this->url('second.route', ['parameter']),
 		]);

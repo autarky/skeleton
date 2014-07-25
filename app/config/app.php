@@ -21,9 +21,11 @@ return [
 		'Autarky\Templating\TwigServiceProvider',
 		'Autarky\Logging\LogServiceProvider',
 
-		// This provider binds a PDO instance to your container.
+		// This provider gives access to a PDO container.
 		// 'Autarky\Database\DatabaseServiceProvider',
 		// This provider depends on the package symfony/event-dispatcher.
 		// 'Autarky\Events\EventServiceProvider',
+		// You can (and should!) make your own service providers.
+		// 'Application\AppProvider',
 	],
 ];

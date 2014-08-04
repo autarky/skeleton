@@ -1,5 +1,5 @@
 <?php
-namespace Application;
+namespace MyApplication;
 
 class SomeClass
 {

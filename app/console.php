@@ -12,7 +12,7 @@ $app = require __DIR__ .'/start.php';
  * @link http://symfony.com/doc/current/components/console/introduction.html
  * @link https://github.com/symfony/Console
  * 
- * @var \Symfony\Component\Console\Application
+ * @var \Symfony\Component\Console\MyApplication
  */
 $console = $app->bootConsole();
 

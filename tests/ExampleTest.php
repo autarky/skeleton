@@ -1,5 +1,5 @@
 <?php
-namespace Application\Tests;
+namespace MyApplication\Tests;
 
 use Autarky\Testing\TestCase;
 

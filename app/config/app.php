@@ -26,6 +26,6 @@ return [
 		// This provider depends on the package symfony/event-dispatcher.
 		// 'Autarky\Events\EventServiceProvider',
 		// You can (and should!) make your own service providers.
-		// 'Application\AppProvider',
+		// 'MyApplication\AppProvider',
 	],
 ];

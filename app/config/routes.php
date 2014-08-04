@@ -7,11 +7,11 @@ return [
 	'first.route' => [
 		'method'  => 'GET',
 		'path'    => '/',
-		'handler' => 'Application\ExampleController:exampleAction',
+		'handler' => 'MyApplication\ExampleController:exampleAction',
 	],
 	'second.route' => [
 		'method'  => 'GET',
 		'path'    => '/bar/{v1}',
-		'handler' => 'Application\ExampleController:otherAction',
+		'handler' => 'MyApplication\ExampleController:otherAction',
 	],
 ];

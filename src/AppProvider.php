@@ -16,9 +16,26 @@ use Autarky\Kernel\ServiceProvider;
  */
 class AppProvider extends ServiceProvider
 {
+	/**
+	 * Register IoC bindings, middleware etc here. Do not try to resolve any
+	 * services from the container without wrapping it in a closure.
+	 *
+	 * @return void
+	 */
 	public function register()
 	{
-		// $this->app->getContainer()...
-		// $this->app->config(function($app) { ... });
+		// register a callback for when the application is booted and ready to
+		// be configured further.
+		$this->app->config([$this, 'config']);
+	}
+
+	/**
+	 * Configure the application further here.
+	 *
+	 * @return void
+	 */
+	public function config()
+	{
+		//
 	}
 }

@@ -12,20 +12,16 @@ return [
 	 * provide a router, a templating engine and a class for managing your
 	 * session. You can replace the default ones with your own or add your own
 	 * custom providers here.
-	 *
-	 * Some optional providers have been commented out.
 	 */
 	'providers' => [
-		'Autarky\Session\SessionServiceProvider',
-		'Autarky\Routing\RoutingServiceProvider',
-		'Autarky\Templating\TwigServiceProvider',
+		'Autarky\Database\DatabaseServiceProvider',
+		'Autarky\Events\EventServiceProvider',
 		'Autarky\Logging\LogServiceProvider',
+		'Autarky\Routing\RoutingServiceProvider',
+		'Autarky\Session\SessionServiceProvider',
+		'Autarky\Templating\TwigServiceProvider',
 
-		// This provider gives access to a PDO container.
-		// 'Autarky\Database\DatabaseServiceProvider',
-		// This provider depends on the package symfony/event-dispatcher.
-		// 'Autarky\Events\EventServiceProvider',
 		// You can (and should!) make your own service providers.
-		// 'MyApplication\AppProvider',
+		'MyApplication\AppProvider',
 	],
 ];

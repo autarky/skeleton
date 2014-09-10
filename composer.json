@@ -9,7 +9,7 @@
 		}
 	],
 	"require": {
-		"autarky/framework": "0.2.*"
+		"autarky/framework": "0.3.*"
 	},
 	"autoload": {
 		"psr-4": {

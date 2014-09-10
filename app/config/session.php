@@ -30,6 +30,13 @@ return [
 	'mock' => false,
 
 	/**
+	 * Whether to force the session to start on every request or not. If you do
+	 * not force the session to start, it will be started the first time you try
+	 * to set or get something from the session.
+	 */
+	'force' => false,
+
+	/**
 	 * Session cookie parameters.
 	 * @link http://www.php.net/manual/en/function.session-set-cookie-params.php
 	 */

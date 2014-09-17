@@ -2,13 +2,28 @@
 // Use Composer's autoloader.
 require_once dirname(__DIR__).'/vendor/autoload.php';
 
-/**
- * bootstrap() is a shortcut to set up the default configuration. the second
- * argument defines how the environment is determined. can be a plain string or
- * a closure that returns a string.
- */
-$app = Autarky\Kernel\Application::bootstrap(__DIR__, function() {
-	return getenv('AUTARKY_ENV') ?: 'default';
-});
+$env = function() {
+	return getenv('AUTARKY_ENV') ?: 'production';
+};
+
+$providers = [
+	// Some providers are more important than others and should come first.
+	new Autarky\Container\ContainerProvider,
+	new Autarky\Config\ConfigProvider(__DIR__.'/config'),
+	new Autarky\Errors\ErrorHandlerProvider,
+
+	// The following providers are non-vital, and the order does not matter.
+	new Autarky\Database\DatabaseProvider,
+	new Autarky\Events\EventDispatcherProvider,
+	new Autarky\Logging\LoggingProvider,
+	new Autarky\Routing\RoutingProvider,
+	new Autarky\Session\SessionProvider,
+	new Autarky\Templating\TwigTemplatingProvider,
+
+	// You can (and should!) make your own service providers.
+	new MyApplication\AppProvider,
+];
+
+$app = new Autarky\Kernel\Application($env, $providers);
 
 return $app;

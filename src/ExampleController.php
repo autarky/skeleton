@@ -34,8 +34,8 @@ class ExampleController extends Controller
 		$counter = $session->get('counter', 0);
 		$session->set('counter', ++$counter);
 
-		// return a rendered template using the view() method.
-		return $this->view('example.html.twig', [
+		// return a rendered template using the render() method.
+		return $this->render('example.html.twig', [
 			'message' => $this->dependency->sayHello(),
 			'counter' => $counter,
 			'url' => $this->url('second.route', ['parameter']),

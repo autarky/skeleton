@@ -11,7 +11,7 @@ return [
 	],
 	'second.route' => [
 		'method'  => 'GET',
-		'path'    => '/bar/{v1}',
+		'path'    => '/bar/{foo}',
 		'handler' => 'MyApplication\ExampleController:otherAction',
 	],
 ];

@@ -36,6 +36,14 @@ class AppProvider extends ServiceProvider
 	 */
 	public function config()
 	{
-		//
+		$config = $this->app->getConfig();
+		$router = $this->app->getContainer()
+				->resolve('Autarky\Routing\RouterInterface');
+
+		// this will read the app/config/routes.php file and mount it onto the
+		// root path of your application. if you want to split your routes up
+		// into multiple files/directories, you can simply duplicate the line of
+		// code underneath and mount as many configs as you wish.
+		$router->mount($config->get('routes'), '/');
 	}
 }

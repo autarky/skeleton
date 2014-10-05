@@ -29,7 +29,7 @@ return [
 	/**
 	 * The path where cached template files should be stored.
 	 */
-	'templates-cache' => $base . '/app/storage/templates',
+	'templates_cache' => $base . '/app/storage/templates',
 
 	/**
 	 * If the 'file' session handler is used, this is the path to the directory
@@ -48,5 +48,5 @@ return [
 	 * route data to a file to improve performance. Note that closure routes
 	 * will cause caching to break. Set to null to disable.
 	 */
-	'route-cache' => null,
+	'route_cache' => null,
 ];

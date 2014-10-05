@@ -10,7 +10,7 @@ return [
 	 */
 	'connections' => [
 		'sqlite' => [
-			'dsn' => 'sqlite:'.__DIR__.'/../storage/db.sqlite',
+			'dsn' => 'sqlite:'.dirname(__DIR__).'/storage/db.sqlite',
 			'username' => null,
 			'password' => null,
 			'options' => [],

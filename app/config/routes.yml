@@ -1,0 +1,12 @@
+# The default way of registering routes in your application is via config files.
+# The root-level keys ("first.route") are route names.
+
+first.route:
+  method: 'GET'
+  path: '/'
+  handler: 'MyApplication\ExampleController:exampleAction'
+
+second.route:
+  method: 'GET'
+  path: '/bar/{foo}'
+  handler: 'MyApplication\ExampleController:otherAction'

@@ -9,7 +9,8 @@
 		}
 	],
 	"require": {
-		"autarky/framework": "0.5.*"
+		"autarky/framework": "0.6.*",
+		"symfony/yaml": "~2.3"
 	},
 	"autoload": {
 		"psr-4": {

@@ -24,6 +24,12 @@ return [
 	'handler-options' => [],
 
 	/**
+	 * The $options argument passed to Symfony's session storage implementation.
+	 * This usually corresponds to "session.*" options in php.ini.
+	 */
+	'storage-options' => [],
+
+	/**
 	 * Whether or not to "mock" the session driver. This is mostly for tests,
 	 * but could also be used to enforce a stateless API.
 	 */

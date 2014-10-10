@@ -7,7 +7,7 @@ return [
 	'app' => $base . '/app',
 
 	// Path to the public directory, which is your web server's document root.
-	'public' => $base . '/public',
+	'public' => $base . '/web',
 
 	// Path to your composer vendor directory. This path is used to copy files
 	// from packages into your project (WIP).

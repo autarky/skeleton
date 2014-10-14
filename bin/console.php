@@ -1,6 +1,6 @@
 #!/usr/bin/env php5
 <?php
-$app = require __DIR__ .'/start.php';
+$app = require dirname(__DIR__).'/app/start.php';
 
 /**
  * This creates a console application instance and prepares the application for

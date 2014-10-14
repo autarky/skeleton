@@ -1,16 +1,13 @@
 <?php
 return [
-	/**
-	 * The connection to use.
-	 */
+	// The connection to use by default.
 	'connection' => 'sqlite',
 
-	/**
-	 * The connections to choose from.
-	 */
+	// The connections available to the application. You can add as many as you
+	// like, and resolve them via the MultiPdoContainer.
 	'connections' => [
 		'sqlite' => [
-			'dsn' => 'sqlite:'.__DIR__.'/../storage/db.sqlite',
+			'dsn' => 'sqlite:'.dirname(__DIR__).'/storage/db.sqlite',
 			'username' => null,
 			'password' => null,
 			'options' => [],

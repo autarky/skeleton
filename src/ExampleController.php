@@ -4,6 +4,17 @@ namespace MyApplication;
 use Autarky\Routing\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * A controller is a class that is mapped to a route. While this example
+ * controller extends from Autarky\Routing\Controller, it doesn't need to - any
+ * PHP class can be a controller. The only requirement is that the method the
+ * route is mapped to returns either a Symfony\Component\HttpFoundation\Response
+ * object or a string (which will be turned into a response).
+ *
+ * The Autarky\Routing\Controller class provides some useful helper messages
+ * that make it easy to render templates, generate route URLs, redirect, read or
+ * modify session values and more.
+ */
 class ExampleController extends Controller
 {
 	protected $dependency;

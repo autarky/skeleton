@@ -9,7 +9,7 @@
 		}
 	],
 	"require": {
-		"autarky/framework": "0.6.*",
+		"autarky/framework": "0.7.*@dev",
 		"symfony/yaml": "~2.3"
 	},
 	"autoload": {

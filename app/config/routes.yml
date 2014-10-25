@@ -2,11 +2,11 @@
 # The root-level keys ("first.route") are route names.
 
 first.route:
-  method: 'GET'
+  method: GET
   path: '/'
-  handler: ['MyApplication\ExampleController', 'exampleAction']
+  handler: [MyApplication\ExampleController, exampleAction]
 
 second.route:
-  method: 'GET'
+  method: GET
   path: '/bar/{foo}'
-  handler: ['MyApplication\ExampleController', 'otherAction']
+  handler: [MyApplication\ExampleController, otherAction]

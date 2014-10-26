@@ -21,7 +21,8 @@ return [
 	'storage' => $base . '/var',
 
 	// Regex parsing of routes is expensive. It is possible to save the parsed
-	// route data to a file to improve performance. Note that closure routes
-	// will cause caching to break. Set to null to disable.
-	'route_cache' => null,
+	// route data to a file to improve performance. Note that you'll have to
+	// manually delete this file if you modify your routes.  Comment out or set
+	// to null to disable caching.
+	// 'route_cache' => $base . '/var/routes.cache',
 ];

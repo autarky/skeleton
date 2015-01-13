@@ -24,11 +24,6 @@ class AppProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		// configurator classes are deferred - they will be instantiated and ran
-		// when all service providers are registered and the application is
-		// finished booting.
-		$this->app->config('MyApplication\Config\LogConfigurator');
-		$this->app->config('MyApplication\Config\ErrorHandlingConfigurator');
-		$this->app->config('MyApplication\Config\RouteConfigurator');
+		//
 	}
 }

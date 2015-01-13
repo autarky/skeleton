@@ -1,7 +1,8 @@
 <?php
-namespace MyApplication;
+namespace MyApplication\Web;
 
 use Autarky\Routing\Controller;
+use MyApplication\SomeClass;
 use Symfony\Component\HttpFoundation\Request;
 
 /**

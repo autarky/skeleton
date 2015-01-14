@@ -7,7 +7,9 @@ use Exception;
 use Psr\Log\LoggerInterface;
 
 /**
- * This configurator adds an error handler that logs the error.
+ * This configurator adds error handling. To begin with, the only handler is a
+ * simple one that logs all uncaught exceptions, but you can also add handlers
+ * that return responses to the end user.
  */
 class ErrorHandlingConfigurator implements ConfiguratorInterface
 {

@@ -1,15 +1,8 @@
 {
 	"name": "autarky/skeleton",
 	"description": "A skeleton project for Autarky.",
-	"keywords": ["autarky", "project", "skeleton"],
-	"authors": [
-		{
-			"name": "Andreas Lutro",
-			"email": "anlutro@gmail.com"
-		}
-	],
 	"require": {
-		"autarky/framework": "0.7.*@dev",
+		"autarky/framework": "0.7.*",
 		"symfony/yaml": "~2.3",
 		"monolog/monolog": "~1.3"
 	},

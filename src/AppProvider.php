@@ -12,7 +12,7 @@ use Autarky\Kernel\ServiceProvider;
  * If you need to access another service bound to the IoC container, it may not
  * be fully registered and/or configured when register() is called. To get
  * around this, create a config callback which will be invoked when the app
- * is fully loaded.
+ * is fully loaded, or use a configurator instead.
  */
 class AppProvider extends ServiceProvider
 {

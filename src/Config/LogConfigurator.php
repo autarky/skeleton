@@ -16,8 +16,8 @@ use Monolog\Logger;
 class LogConfigurator implements ConfiguratorInterface
 {
 	protected $channelManager;
-	protected $application;
 	protected $config;
+	protected $environment;
 
 	public function __construct(
 		ChannelManager $channelManager,

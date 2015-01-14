@@ -2,3 +2,10 @@
 # exceptions early and more - but at the cost of security and performance.
 # Turn on in development, turn off in production.
 debug: true
+
+# Configurators are classes that are instantiated and ran when the
+# application is booting.
+configurators:
+  - MyApplication\Config\LogConfigurator
+  - MyApplication\Config\ErrorHandlingConfigurator
+  - MyApplication\Config\RouteConfigurator

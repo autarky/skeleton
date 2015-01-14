@@ -17,5 +17,7 @@ $app = require dirname(__DIR__).'/app/start.php';
 $console = $app->bootConsole();
 
 $console->add(new \Autarky\Console\BorisCommand);
+$console->add(new \Autarky\Console\RouteDispatchCommand);
+$console->add(new \Autarky\Console\RouteListCommand);
 
 $console->run();

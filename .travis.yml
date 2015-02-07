@@ -1,16 +1,31 @@
-language: php
+# which branches you want travis to run tests on.
+# remove this block if you want to test all branches
+branches:
+  only:
+    - develop
+    - master
 
+# which versions of PHP to test against
+language: php
 php: 
   - 5.4
   - 5.5
   - 5.6
   - hhvm
 
-before_install:
-  - composer self-update
+# run tests once with each of these environment variables. use --prefer-lowest
+# to make sure that our composer.json version constraints aren't wrong
+env:
+  - COMPOSER_ARGS=""
+  - COMPOSER_ARGS="--prefer-lowest"
 
+# install dependencies
 install:
-  - composer install --dev --no-interaction
+  - composer update ${COMPOSER_ARGS} --dev --no-interaction
 
+# run the tests
 script:
   - phpunit
+
+# if you don't need sudo, this flag will speed up your test process
+sudo: false

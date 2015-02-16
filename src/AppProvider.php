@@ -1,7 +1,7 @@
 <?php
 namespace MyApplication;
 
-use Autarky\Kernel\ServiceProvider;
+use Autarky\Provider;
 
 /**
  * Service providers are a class-based way to configure your application and
@@ -14,7 +14,7 @@ use Autarky\Kernel\ServiceProvider;
  * around this, create a config callback which will be invoked when the app
  * is fully loaded, or use a configurator instead.
  */
-class AppProvider extends ServiceProvider
+class AppProvider extends Provider
 {
 	/**
 	 * Register IoC bindings, middleware etc here. Do not try to resolve any

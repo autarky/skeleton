@@ -1,8 +1,8 @@
 <?php
 namespace MyApplication\Config;
 
+use Autarky\ConfiguratorInterface;
 use Autarky\Config\ConfigInterface;
-use Autarky\Kernel\ConfiguratorInterface;
 use Autarky\Routing\RouterInterface;
 
 /**

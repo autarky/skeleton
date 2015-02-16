@@ -1,8 +1,8 @@
 <?php
 namespace MyApplication\Config;
 
+use Autarky\ConfiguratorInterface;
 use Autarky\Errors\ErrorHandlerManager;
-use Autarky\Kernel\ConfiguratorInterface;
 use Exception;
 use Psr\Log\LoggerInterface;
 

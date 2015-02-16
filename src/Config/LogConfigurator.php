@@ -1,9 +1,9 @@
 <?php
 namespace MyApplication\Config;
 
+use Autarky\Application;
+use Autarky\ConfiguratorInterface;
 use Autarky\Config\ConfigInterface;
-use Autarky\Kernel\Application;
-use Autarky\Kernel\ConfiguratorInterface;
 use Autarky\Logging\ChannelManager;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\StreamHandler;

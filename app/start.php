@@ -25,14 +25,14 @@ $providers = [
 	new Autarky\Logging\LoggingProvider,
 	new Autarky\Routing\RoutingProvider,
 	new Autarky\Session\SessionProvider,
-	new Autarky\Templating\TwigTemplatingProvider,
+	new Autarky\TwigTemplating\TwigTemplatingProvider,
 
 	// You can (and should!) make your own service providers.
 	new MyApplication\AppProvider,
 ];
 
 // Instantiate the application, which does all the heavy lifting from here on.
-$app = new Autarky\Kernel\Application($env, $providers);
+$app = new Autarky\Application($env, $providers);
 
 // Return it so that the instance can easily be used from elsewhere. Example:
 // $app = require '/path/to/start.php';

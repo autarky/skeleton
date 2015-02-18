@@ -4,6 +4,10 @@
 // autoloading here: https://getcomposer.org/doc/00-intro.md#autoloading
 require_once dirname(__DIR__).'/vendor/autoload.php';
 
+// Use phpdotenv to manage environment variables.
+// See https://github.com/vlucas/phpdotenv for more information.
+Dotenv::load(dirname(__DIR__));
+
 // The environment can be defined as a plain string or you a closure that
 // returns a string. The closure is lazily invoked.
 $env = function() {

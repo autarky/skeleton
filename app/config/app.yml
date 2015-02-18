@@ -3,9 +3,13 @@
 # Turn on in development, turn off in production.
 debug: true
 
-# Configurators are classes that are instantiated and ran when the
-# application is booting.
+# Configurators are classes that are resolved from the service container and ran
+# when the application is booting.
 configurators:
-  - MyApplication\Config\LogConfigurator
-  - MyApplication\Config\ErrorHandlingConfigurator
-  - MyApplication\Config\RouteConfigurator
+  - Autarky\Logging\DefaultLogConfigurator
+  - Autarky\Routing\DefaultRouteConfigurator
+
+# Class-based error handlers can be added here.
+# Read more: https://github.com/autarky/framework/wiki/Error-Handling
+error_handlers:
+  - Autarky\Logging\LoggingErrorHandler

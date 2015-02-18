@@ -1,4 +1,4 @@
 # Mock the session storage when running tests. This causes session data to be
 # persisted in-memory on a per-request basis rather than to a database,
 # filesystem or similar.
-mock: true
+storage: mock_array

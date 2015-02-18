@@ -19,6 +19,10 @@ env:
   - COMPOSER_ARGS=""
   - COMPOSER_ARGS="--prefer-lowest"
 
+# prepare the system for installation
+before_install:
+  - cp .env.example .env
+
 # install dependencies
 install:
   - composer update ${COMPOSER_ARGS} --dev --no-interaction

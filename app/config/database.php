@@ -22,10 +22,26 @@ return [
 
 		'mssql' => [
 			'driver'   => 'sqlsrv',
-			'username' => getenv('DB_USERNAME'),
-			'password' => getenv('DB_password'),
 			'Server'   => 'localhost,1521',
 			'Database' => getenv('DB_DBNAME'),
+			'username' => getenv('DB_USERNAME'),
+			'password' => getenv('DB_password'),
+		],
+
+		'mysql' => [
+			'driver'   => 'mysql',
+			'host'     => 'localhost',
+			'port'     => 3307,
+			'dbname'   => getenv('DB_DBNAME'),
+			'username' => getenv('DB_USERNAME'),
+			'password' => getenv('DB_password'),
+			'charset'  => 'utf8',
+			'pdo_init_commands' => [
+				'SET SESSION sql_mode = TRADITIONAL,
+				     SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED,
+				     character_set_connection = utf8,
+				     collation_connection = utf8_bin',
+			],
 		],
 	],
 ];

@@ -23,6 +23,10 @@ env:
 install:
   - composer update ${COMPOSER_ARGS} --dev --no-interaction
 
+# preparations before running the test script(s)
+before_script:
+  - cp .env.example .env
+
 # run the tests
 script:
   - phpunit

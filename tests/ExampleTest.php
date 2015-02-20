@@ -1,7 +1,7 @@
 <?php
 namespace MyApplication\Tests;
 
-use Autarky\Testing\TestCase;
+use Autarky\Testing\WebTestCase;
 
 /**
  * A simple example of an application-level test. These tests will boot up
@@ -14,7 +14,7 @@ use Autarky\Testing\TestCase;
  * instance of \Symfony\Component\BrowserKit\Client, which can be used to
  * make "fake" requests to your application.
  */
-class ExampleTest extends TestCase
+class ExampleTest extends WebTestCase
 {
 	/**
 	 * This method can (and should) be moved to your own abstract TestCase
@@ -35,8 +35,11 @@ class ExampleTest extends TestCase
 		$this->assertEquals('testing', $this->app->getEnvironment());
 
 		/**
-		 * The DOM crawler can be used to run assertions on any HTML
-		 * returned by the application.
+		 * The DOM crawler can be used to run assertions on any HTML returned
+		 * by the application. If you don't need this, you can extend the
+		 * TestCase class instead of WebTestCase, and remove symfony/browser-kit
+		 * from your composer.json.
+		 *
 		 * @var \Symfony\Component\DomCrawler\Crawler
 		 */
 		$crawler = $this->client->request('GET', '/');

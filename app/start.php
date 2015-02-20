@@ -4,6 +4,10 @@
 // autoloading here: https://getcomposer.org/doc/00-intro.md#autoloading
 require_once dirname(__DIR__).'/vendor/autoload.php';
 
+// Use phpdotenv to manage environment variables.
+// See https://github.com/vlucas/phpdotenv for more information.
+Dotenv::load(dirname(__DIR__));
+
 // The environment can be defined as a plain string or you a closure that
 // returns a string. The closure is lazily invoked.
 $env = function() {
@@ -25,14 +29,14 @@ $providers = [
 	new Autarky\Logging\LoggingProvider,
 	new Autarky\Routing\RoutingProvider,
 	new Autarky\Session\SessionProvider,
-	new Autarky\Templating\TwigTemplatingProvider,
+	new Autarky\TwigTemplating\TwigTemplatingProvider,
 
 	// You can (and should!) make your own service providers.
 	new MyApplication\AppProvider,
 ];
 
 // Instantiate the application, which does all the heavy lifting from here on.
-$app = new Autarky\Kernel\Application($env, $providers);
+$app = new Autarky\Application($env, $providers);
 
 // Return it so that the instance can easily be used from elsewhere. Example:
 // $app = require '/path/to/start.php';

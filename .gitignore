@@ -2,6 +2,10 @@
 # composer.lock file and run `composer install` on the server.
 /vendor
 
+# The dotenv file contains environment variables specific to the machine it's
+# placed on and should not be distributed either.
+.env
+
 # Downloading a local copy of composer.phar on the live server environment is
 # usually a good idea as well.
 composer.phar

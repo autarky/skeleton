@@ -39,7 +39,6 @@ return [
 			'pdo_init_commands' => [
 				'SET SESSION sql_mode = TRADITIONAL,
 				     SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED,
-				     character_set_connection = utf8,
 				     collation_connection = utf8_bin',
 			],
 		],

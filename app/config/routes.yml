@@ -4,9 +4,9 @@
 first.route:
   method: GET
   path: '/'
-  controller: [MyApplication\Web\ExampleController, exampleAction]
+  controller: [MyApplication\ExampleController, exampleAction]
 
 second.route:
   method: GET
   path: '/bar/{foo}'
-  controller: [MyApplication\Web\ExampleController, otherAction]
+  controller: [MyApplication\ExampleController, otherAction]

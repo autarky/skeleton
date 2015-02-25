@@ -8,14 +8,14 @@ require_once dirname(__DIR__).'/vendor/autoload.php';
 // See https://github.com/vlucas/phpdotenv for more information.
 Dotenv::load(dirname(__DIR__));
 
-// The environment can be defined as a plain string or you a closure that
+// The environment can be defined as a plain string, or you a closure that
 // returns a string. The closure is lazily invoked.
 $env = function() {
 	return getenv('AUTARKY_ENV') ?: 'production';
 };
 
 // Providers are like modules in your application. They can be core framework
-// providers, third-party package providers or your own. If you want to replace
+// providers, third-party package providers, or your own. If you want to replace
 // parts of the core framework, replace the respective service provider.
 $providers = [
 	// Some providers are more important than others and should come first.

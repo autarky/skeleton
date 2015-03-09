@@ -38,8 +38,7 @@ return [
 			'charset'  => 'utf8',
 			'pdo_init_commands' => [
 				'SET SESSION sql_mode = TRADITIONAL,
-				     SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED,
-				     collation_connection = utf8_bin',
+				     SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
 			],
 		],
 	],

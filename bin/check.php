@@ -21,4 +21,4 @@ if (file_exists($configPath.'/path.php')) {
 
 $verbose = in_array('-v', $argv) || in_array('--verbose', $argv);
 
-exit(Autarky\Support\Diagnostic::check($paths, $verbose));
+exit(Autarky\Utils\Diagnostic::check($paths, $verbose));

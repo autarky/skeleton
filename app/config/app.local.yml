@@ -1,0 +1,2 @@
+# Enable debug mode in the "local" environment.
+debug: true

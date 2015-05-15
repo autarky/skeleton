@@ -1,7 +1,7 @@
 # Turn debug on to display more information about exceptions, throw more
 # exceptions early and more - but at the cost of security and performance.
 # Turn on in development, turn off in production.
-debug: true
+debug: false
 
 # Configurators are classes that are resolved from the service container and ran
 # when the application is booting.

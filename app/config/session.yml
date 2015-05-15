@@ -27,7 +27,7 @@ storage_options: {}
 force: false
 
 # Whether to use Symfony's write check wrapper. This will check if anything has
-# changed in the session before saving it, potentially increasing throughput.
+# changed in the session before saving it, potentially improving performance.
 write_check: false
 
 # Session cookie parameters. Corresponds to session_set_cookie_params():

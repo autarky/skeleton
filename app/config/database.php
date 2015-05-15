@@ -8,7 +8,7 @@ return [
 	'connections' => [
 		'sqlite' => [
 			'driver' => 'sqlite',
-			'path'   => dirname(__DIR__).'/storage/db.sqlite',
+			'path'   => dirname(dirname(__DIR__)).'/var/db.sqlite',
 		],
 
 		'postgres' => [

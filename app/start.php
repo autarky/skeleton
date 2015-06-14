@@ -1,12 +1,17 @@
 <?php
+// User-defined constants are nothing to be afraid of if used correctly. Some of
+// our other PHP files may need to know the root directory of our app without
+// having access to the application or configuration store instances.
+if (!defined('APP_ROOT')) define('APP_ROOT', dirname(__DIR__));
+
 // Use Composer's autoloader to avoid manually including files and including
 // files containing classes that aren't used. Read more about Composer
 // autoloading here: https://getcomposer.org/doc/00-intro.md#autoloading
-require_once dirname(__DIR__).'/vendor/autoload.php';
+require_once APP_ROOT.'/vendor/autoload.php';
 
 // Use phpdotenv to manage environment variables.
 // See https://github.com/vlucas/phpdotenv for more information.
-Dotenv::load(dirname(__DIR__));
+Dotenv::load(APP_ROOT);
 
 // The environment can be defined as a plain string, or you a closure that
 // returns a string. The closure is lazily invoked.

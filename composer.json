@@ -2,7 +2,7 @@
 	"name": "autarky/skeleton",
 	"description": "A skeleton project for Autarky.",
 	"require": {
-		"autarky/framework": "0.9.*",
+		"autarky/framework": "0.10.*",
 		"autarky/twig-templating": "0.2.*",
 		"monolog/monolog": "~1.3",
 		"symfony/console": "~2.3",

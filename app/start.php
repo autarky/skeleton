@@ -31,9 +31,10 @@ $providers = [
 	// The following providers are non-vital, and the order does not matter.
 	new Autarky\Database\DatabaseProvider,
 	new Autarky\Events\EventDispatcherProvider,
+	new Autarky\Http\CookieProvider,
+	new Autarky\Http\SessionProvider,
 	new Autarky\Logging\LoggingProvider,
 	new Autarky\Routing\RoutingProvider,
-	new Autarky\Session\SessionProvider,
 	new Autarky\TwigTemplating\TwigTemplatingProvider,
 
 	// You can (and should!) make your own service providers.

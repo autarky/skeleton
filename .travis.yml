@@ -11,13 +11,8 @@ php:
   - 5.4
   - 5.5
   - 5.6
+  - 7.0
   - hhvm
-
-# run tests once with each of these environment variables. use --prefer-lowest
-# to make sure that our composer.json version constraints aren't wrong
-env:
-  - COMPOSER_ARGS=""
-  - COMPOSER_ARGS="--prefer-lowest"
 
 # install dependencies
 install:

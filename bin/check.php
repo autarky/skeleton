@@ -1,4 +1,4 @@
-#!/usr/bin/env php5
+#!/usr/bin/env php
 <?php
 echo <<<INFO
 To get the most out of this script, run it once as your own user and

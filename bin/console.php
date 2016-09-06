@@ -1,4 +1,4 @@
-#!/usr/bin/env php5
+#!/usr/bin/env php
 <?php
 $app = require dirname(__DIR__).'/app/start.php';
 

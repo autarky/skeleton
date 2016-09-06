@@ -43,7 +43,7 @@ class ExampleController extends Controller
 		 * The session is an integral part of any PHP application.
 		 * @var Symfony\Component\HttpFoundation\Session\Session
 		 */
-		$session = $this->getSession();
+		$session = $request->getSession();
 		$counter = $session->get('counter', 0);
 		$session->set('counter', ++$counter);
 
